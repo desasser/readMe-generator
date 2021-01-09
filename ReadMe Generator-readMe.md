@@ -1,17 +1,18 @@
-# TITLE
+
+# ReadMe Generator
 ## Completed by: 
-### USERNAME
+### desasser
 
 <br />
 
-## Link: https://USERNAME.github.io/REPO NAME GOES HERE/
+## Link: https://desasser.github.io/test/
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <br />
 - - - - 
 
 ## Description: 
-DESCRIPTION GOES HERE
+This project is for creating a high quality readme from some set user inputs.
 
 ## Table of Contents: 
 * [Installation](#installation)
@@ -22,22 +23,22 @@ DESCRIPTION GOES HERE
 * [Questions](#questions)
 
 ## Installation: 
-INSTALLATION INSTRUCTIONS GO HERE
+no installation necessary
 
 ## Usage: 
-USAGE INSTRUCTIONS GO HERE
+generating readmes
 
 ## License: 
-WHICH LICENSE GOES HERE
+This project is covered under the MIT license.
 
 ## Contributing: 
-CONTRIBUTION INSTRUCTIONS GO HERE
+fix my mistakes
 
 ## Tests: 
-TESTS INFO GOES HERE
+test me
 
 ## Questions:
-LINK TO GITHUB PROFILE GOES HERE
-EMAIL GOES HERE
+* https://github.com/desasser
+* test@test.test
 
 You can reach me via email at the above address with any additionals questions, comments, or concerns regarding this project.

@@ -1,17 +1,18 @@
-# TITLE
+
+# gen
 ## Completed by: 
-### USERNAME
+### desasser
 
 <br />
 
-## Link: https://USERNAME.github.io/REPO NAME GOES HERE/
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Link: https://desasser.github.io/repo/
+## BADGE GOES HERE 
 
 <br />
 - - - - 
 
 ## Description: 
-DESCRIPTION GOES HERE
+readme gen
 
 ## Table of Contents: 
 * [Installation](#installation)
@@ -22,22 +23,22 @@ DESCRIPTION GOES HERE
 * [Questions](#questions)
 
 ## Installation: 
-INSTALLATION INSTRUCTIONS GO HERE
+installed
 
 ## Usage: 
-USAGE INSTRUCTIONS GO HERE
+gen readme
 
 ## License: 
-WHICH LICENSE GOES HERE
+MIT
 
 ## Contributing: 
-CONTRIBUTION INSTRUCTIONS GO HERE
+fix
 
 ## Tests: 
-TESTS INFO GOES HERE
+test
 
 ## Questions:
-LINK TO GITHUB PROFILE GOES HERE
-EMAIL GOES HERE
+* https://github.com/desasser
+* repo@repo.repo
 
 You can reach me via email at the above address with any additionals questions, comments, or concerns regarding this project.

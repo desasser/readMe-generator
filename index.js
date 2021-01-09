@@ -45,7 +45,8 @@ inquirer.prompt([
         type: 'list',
         message: 'Which license(s) is used for this project?',
         name: 'license',
-        choices: ['MIT', 'Apache License 2.0', 'GNU General Public License v3.0', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'],
+        choices: ['MIT', 'Apache License 2.0', 'GNU General Public License v3.0'],
+        //, 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'
     },
     {
         // GitHub username
@@ -66,51 +67,61 @@ inquirer.prompt([
         name: 'email',
     }
 ]).then(response => {
-    const readMeOutput = `# ${response.title}
-    ## Completed by: 
-    ### ${response.githubUsername}
-    
-    <br />
-    
-    ## Link: https://${response.githubUsername}.github.io/${repoName}/
-    ## BADGE GOES HERE 
-    
-    <br />
-    - - - - 
-    
-    ## Description: 
-    ${response.description}
-    
-    ## Table of Contents: 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    
-    ## Installation: 
-    ${response.installation}
-    
-    ## Usage: 
-    ${response.usageInfo}
-    
-    ## License: 
-    ${response.license}
-    
-    ## Contributing: 
-    ${response.contributions}
-    
-    ## Tests: 
-    ${response.tests}
-    
-    ## Questions:
-    * https://github.com/${response.githubUsername}
-    * ${response.email}
-    
-    You can reach me via email at the above address with any additionals questions, comments, or concerns regarding this project.`;
+    let licenseBadge;
+    if (response.license === 'MIT') {
+        licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (response.license === 'Apache License 2.0') {
+        licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else {
+        licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    };
 
-    fs.writeFile(`${response.title}-readMe.md`, htmlTemplate, (err) => {
+    const readMeOutput = `
+# ${response.title}
+## Completed by: 
+### ${response.githubUsername}
+
+<br />
+
+## Link: https://${response.githubUsername}.github.io/${response.repoName}/
+${licenseBadge}
+
+<br />
+- - - - 
+
+## Description: 
+${response.description}
+
+## Table of Contents: 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation: 
+${response.installation}
+
+## Usage: 
+${response.usageInfo}
+
+## License: 
+This project is covered under the ${response.license} license.
+
+## Contributing: 
+${response.contributions}
+
+## Tests: 
+${response.tests}
+
+## Questions:
+* https://github.com/${response.githubUsername}
+* ${response.email}
+
+You can reach me via email at the above address with any additionals questions, comments, or concerns regarding this project.`;
+
+    fs.writeFile(`${response.title}-readMe.md`, readMeOutput, (err) => {
         err ? console.error(err) : console.log('yay!');
     })
 });
@@ -119,5 +130,3 @@ inquirer.prompt([
 //TODO: While loop - ask if the user would like to add a screenshot, if yes where is it located? if no, break out of the loop
 //TODO: While loop - ask if the user would like to add a video, if yes where is it located? if no, break out of the loop
 //TODO: Append the screenshots and/or video to the readme
-
-
