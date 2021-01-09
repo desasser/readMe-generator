@@ -5,14 +5,14 @@
 
 <br />
 
-## Link: https://desasser.github.io/test/
+## Link: https://desasser.github.io/readme-generator/
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <br />
 - - - - 
 
 ## Description: 
-This project is for creating a high quality readme from some set user inputs.
+This project is useful for generating a high-quality, professional readme for any project that requires one.
 
 ## Table of Contents: 
 * [Installation](#installation)
@@ -23,22 +23,22 @@ This project is for creating a high quality readme from some set user inputs.
 * [Questions](#questions)
 
 ## Installation: 
-no installation necessary
+This project is installed by using node.js and utilizing the inquirer npm and fs properties.
 
 ## Usage: 
-generating readmes
+This project is used for generating readmes for all future projects that require one.
 
 ## License: 
 This project is covered under the MIT license.
 
 ## Contributing: 
-fix my mistakes
+Someone else should contribute to this project by fixing any mistakes that I have made.
 
 ## Tests: 
-test me
+This project should be tested by doing this exact process. By using the node index.js command in the commandline and then creating a test readme.
 
 ## Questions:
 * https://github.com/desasser
-* test@test.test
+* desasser79@gmail.com
 
 You can reach me via email at the above address with any additionals questions, comments, or concerns regarding this project.
