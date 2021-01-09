@@ -4,7 +4,7 @@
 
 <br />
 
-## Link: https://desasser.github.io/readme-generator/
+## Link: https://github.com/desasser/readMe-generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Video: 
